@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB78OrcbUAdfTih21izJZVjJG6oTUJpE3U&callback=initMap" async defer></script>
+  <script>
+    function initMap() {
+      var barcelona = { lat: 41.3851, lng: 2.1734 }; // Współrzędne Barcelony
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12, // Poziom przybliżenia (możesz dostosować)
+          center: barcelona, // Współrzędne Barcelony
+      });
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miasta Świata</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="#top" class="wrapper">
+    <div  class="navbar">
+            <div   class="navbar-item"> <a href="#top">Strona Główna</a></div>
+            <div class="navbar-item"><a href="#gallery">Galeria</a></div>
+            <div class="navbar-item"><a href="#map2">Mapy</a></div>
+            <div class="navbar-item"><a href="#stopka">O stronie</a></div>
+            <div class="navbar-item-menu">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+      </div>
+      <div  class="nav-menu">
+              <div class="nav-item"><a href="#top">Strona Główna</a></div>
+              <hr>
+            <div class="nav-item"><a href="#gallery">Galeria</a></div>
+            <hr>
+            <div class="nav-item"><a href="#map2">Mapy</a></div>
+            <hr>
+            <div class="nav-item"><a href="#stopka">O stronie</a></div>
+            
+      </div>
+    </div>
+    <div id="gallery"   class="header">
+      <h1>Barcelona - Najpiękniejsze miasto w Hiszpanii</h1>
+    </div>
+    <div class="img-wrap">
+        <div class="img-container">
+          <div class="mySlides">
+            <img src="multimedia/town1 (1).jpeg" style="width:100%; object-fit: cover;">
+          </div>
+        
+          <div class="mySlides">
+            <img src="multimedia/town2 (1).jpeg" style="width:100%; object-fit: cover;" >
+          </div>
+        
+          <div class="mySlides">
+            <img src="multimedia/town3 (1).jpeg" style="width:100%; object-fit: cover;">
+          </div>
+            
+          <div class="mySlides">
+            <img src="multimedia/town4 (1).jpeg" style="width:100%; object-fit: cover;">
+          </div>
+          
+        
+          <div class="arrow-cont">
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+            
+        </div>
+        <div class="miniature-cont">
+          <img src="multimedia/town1 (1).jpeg" onclick="currentSlide(1)" style="height:100px; width: 25%; border-right:3px solid rgba(0, 0, 0, 0.8);" alt="">
+          <img src="multimedia/town2 (1).jpeg" onclick="currentSlide(2)"  style="height:100px; width: 25%; border-right:3px solid rgba(0, 0, 0, 0.8);" alt="">
+          <img src="multimedia/town3 (1).jpeg" onclick="currentSlide(3)" style="height:100px; width: 25%; border-right:3px solid rgba(0, 0, 0, 0.8);" alt="">
+          <img src="multimedia/town4 (1).jpeg" onclick="currentSlide(4)" style="height:100px; width: 25%; " alt="">
+        </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img class="card-img" style="width: 80%;
+        height: 40%; border-radius: 6px;
+        object-fit: cover;" src="multimedia/town1.jpeg" alt="">
+        <p class="card-text">
+         <a class="link" href="park.html">Park Güell</a>  to magiczne miejsce w Barcelonie, zaprojektowane przez Gaudíego. Połącza naturę z architekturą, oferując niezwykłe widoki. Rzeźby i mozaiki tworzą arcydzieło sztuki, a park to podróż w świat kreatywności.
+        </p>
+      </div>
+      <div class="card">
+        <img class="card-img" style="width: 80%;
+        height: 40%; border-radius: 6px;
+        object-fit: cover;" src="multimedia/town2.jpeg" alt="">
+        <p class="card-text">
+        <a  class="link" href="budynki.html">Budynki w Barcelonie</a>   łączą tradycję z nowoczesnością, tworząc niezwykłe krajobrazy. Kolorowe fasady i oryginalne wzornictwo sprawiają, że każda dzielnica ma swój unikalny styl. Barcelońska architektura to prawdziwa inspiracja dla miłośników sztuki i historii.
+        </p>
+      </div>
+      <div class="card">
+        <img class="card-img" style="width: 80%;
+        height: 40%;
+        object-fit: cover; border-radius: 6px;" src="multimedia/town3.jpeg" alt="">
+        <p class="card-text">
+          <a class="link" href="kosciol.html">Sagrada Familia</a> to ikona Barcelony i niezwykłe dzieło architektoniczne Gaudíego. To niedokończony kościół, który zachwyca swoją oryginalnością i detalem. Jego wnętrze to prawdziwa oda dla sztuki i religii. To nieodłączna część wizyty w Barcelonie.
+        </p>
+      </div>
+    </div>
+    <div class="form">
+      <form action="" method="post">
+        <fieldset>
+          <legend>Formularz</legend>
+        
+        <label for="imie">Imię</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="nazwisko">Nazwisko</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="tel">Telefon</label>
+  <input type="tel" id="tel"><br><br>
+  <label for="date">Data urodzenia</label>
+  <input style="margin: 10px 0px;" type="date" name="date" id="date">
+  <label for="wybor" style="font-size: 1.05 rem; font-weight: 600;">Czy zamierzasz odwiedzić to miasto?</label>
+  <div class="radio-container">
+    <input type="radio" name="wybor" id="wybor1">
+    <label for="wybor1">Tak</label><br>
+    <input type="radio" name="wybor" id="wybor2">
+    <label for="wybor2">Nie</label><br>
+    <input type="radio" name="wybor" id="wybor3">
+    <label for="wybor3">Nie wiem</label><br>
+</div>
+
+  
+  
+  <label style="font-size: 1.05 rem; font-weight: 600;" for="message">Napisz swoją recenzję miasta</label><br>
+  <textarea placeholder="Tu wpisz treść" name="message" id="" cols="30" rows="10"></textarea><br><br>
+  <div class="btn-container">
+    <input class="link" type="submit" value="Wyślij">
+    <input class="link" type="reset" value="Wyczyść">
+  </div>
+  
+</fieldset>
+      </form>
+    </div>
+    
+    <div class="table-flex">
+      <h2 style="text-align: center; color: black; margin-top: 40px; ">Ile turystów wybiera Barcelonę</h2>
+      <table class="table" cellspacing="0">
+        <tr>
+            <th>Miasto</th>
+            <th>Liczba Odwiedzin (przybliżona) </th>
+        </tr>
+        <tr>
+            <td>Barcelona</td>
+            <td>20 700 000</td>
+        </tr>
+        <tr>
+            <td>Madryt</td>
+            <td>7 000 000</td>
+        </tr>
+        <tr>
+            <td>Rzym</td>
+            <td>7 120 000</td>
+        </tr>
+        <tr>
+            <td>Lizbona</td>
+            <td>3 700 000</td>
+        </tr>
+        <tr>
+            <td>Ateny</td>
+            <td>4 600 000</td>
+        </tr>
+    </table>
+    
+    </div>
+    <hr>
+    <div class="list-flex">
+      <h2>Dlatego warto odwiedzić Barcelonę:</h2>
+      <ul>
+        <li>Piękna architektura, w tym słynna Sagrada Familia.</li>
+        <li>Znana plaża Barceloneta i ciepłe klimatyczne warunki.</li>
+        <li>Wspaniała kuchnia katalońska i liczne restauracje.</li>
+        <li>Bogata historia i kultura, w tym muzea i zabytki.</li>
+      </ul>
+    </div>
+    <div class="embed">
+      <h2>Filmik o Barcelonie:</h2>
+      <div class="video-container">
+        <iframe  class="video" src="https://www.youtube.com/embed/Hx8_OgxINjw?si=BpG307lCQUkkBhl3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="audio-container">
+        <h2>Hiszpańska muzyka - Flamenco:</h2>
+        <audio controls>
+          <source src="multimedia/flamenco.mp3" type="audio/mpeg">
+        Twoja przeglądarka nie wspiera tego elementu audio.
+        </audio>
+      </div>
+      
+      
+    </div>
+    <hr id ="map2">
+    <div  class="map-container">
+      <h2 style="text-align: center; color: black; margin-top: 40px; ">Mapa Barcelony:</h2>
+      <div id="map" style=" border-radius: 12px; width: 100%; height: 500px;"></div>
+    </div>
+    
+  </div>
+
+  <script defer>
+    const itemMenu = document.querySelector(".navbar-item-menu")
+const nav_menu = document.querySelector(".nav-menu")
+const nav_items = document.querySelectorAll(".nav-item");
+nav_items.forEach(nav_item => {
+  nav_item.addEventListener("click", () => {
+    const nav_menu = document.querySelector(".nav-menu");
+    nav_menu.classList.toggle("active");
+  });
+});
+itemMenu.addEventListener("click",()=>{
+  nav_menu.classList.toggle("active");
+})
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  
+  slides[slideIndex-1].style.display = "block";
+  
+ 
+}
+
+  </script>
+</body>
+</html>
